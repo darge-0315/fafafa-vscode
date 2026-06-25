@@ -2,8 +2,12 @@
   "name": "fafafa",
   "displayName": "发发发",
   "description": "状态栏实时显示 A 股涨跌幅",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darge-0315/fafafa-vscode.git"
+  },
   "publisher": "local",
   "engines": {
     "vscode": "^1.74.0"
