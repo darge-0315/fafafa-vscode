@@ -1,0 +1,5 @@
+node_modules/
+*.vsix
+dist/*.map
+.vscode-test/
+.DS_Store

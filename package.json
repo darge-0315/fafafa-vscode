@@ -1,0 +1,52 @@
+{
+  "name": "fafafa",
+  "displayName": "发发发",
+  "description": "状态栏实时显示 A 股涨跌幅",
+  "version": "1.0.7",
+  "icon": "images/icon.png",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fafafa.openSettings",
+        "title": "发发发: 打开设置"
+      },
+      {
+        "command": "fafafa.showMenu",
+        "title": "发发发: 菜单"
+      },
+      {
+        "command": "fafafa.toggleVisibility",
+        "title": "发发发: 切换显示"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "generate-icon": "node scripts/generate-icon.js",
+    "watch": "node esbuild.js --watch",
+    "test": "npm run build && node --test test/**/*.test.mjs",
+    "package": "npm run build && npx @vscode/vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^2.22.0",
+    "esbuild": "^0.20.0",
+    "sharp": "^0.35.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.6.3"
+  }
+}

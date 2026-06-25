@@ -1,0 +1,15 @@
+test/**
+.vscode/**
+.vscode-test/**
+src/**
+node_modules/**
+esbuild.js
+tsconfig.json
+**/*.ts
+**/*.map
+.gitignore
+**/.DS_Store
+logo.png
+logo.jpg
+images/icon-preview.png
+scripts/**
