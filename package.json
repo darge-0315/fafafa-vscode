@@ -35,7 +35,7 @@
     "build": "node esbuild.js",
     "generate-icon": "node scripts/generate-icon.js",
     "watch": "node esbuild.js --watch",
-    "test": "npm run build && node --test test/**/*.test.mjs",
+    "test": "npm run build && node --test test/settings-ui.test.mjs test/statusBar.test.mjs test/stockConstants.test.mjs",
     "package": "npm run build && npx @vscode/vsce package --no-dependencies"
   },
   "devDependencies": {
