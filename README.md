@@ -11,6 +11,28 @@
 - **一键显隐**：可隐藏状态栏股票栏，需要时再显示
 - **悬停详情**：鼠标悬停状态栏可查看股票名称、现价、涨跌额与昨收
 
+## 安装
+
+### 从 Release 下载（推荐）
+
+1. 打开 [Releases 页面](https://github.com/darge-0315/fafafa-vscode/releases)
+2. 选择目标版本，下载 `fafafa-x.x.x.vsix`
+3. 在 VS Code / Cursor 中按 `Ctrl+Shift+P`（macOS：`Cmd+Shift+P`），输入并选择 **Extensions: Install from VSIX...**
+4. 选择刚下载的 `.vsix` 文件完成安装
+
+### 从源码打包
+
+```powershell
+git clone https://github.com/darge-0315/fafafa-vscode.git
+cd fafafa-vscode
+npm install
+npm run package
+```
+
+打包完成后，项目根目录会生成 `fafafa-x.x.x.vsix`，按上述步骤 3–4 安装即可。
+
+**环境要求**：Node.js 18 及以上。
+
 ## 使用指南
 
 ### 状态栏
@@ -65,3 +87,18 @@
 ## 数据来源
 
 行情数据来自 [腾讯财经 API](https://qt.gtimg.cn/)，只读公开行情，无需注册或登录。
+
+## 发布新版本（维护者）
+
+1. 修改 `package.json` 中的 `version` 字段
+2. 提交并推送到 `main` 分支
+3. 创建并推送与版本号一致的标签：
+
+```powershell
+git tag v1.0.8
+git push origin v1.0.8
+```
+
+4. GitHub Actions 将自动运行测试、打包，并在 [Releases 页面](https://github.com/darge-0315/fafafa-vscode/releases) 创建对应版本及 `.vsix` 下载附件
+
+标签名必须与 `package.json` 中的版本号一致（如版本 `1.0.8` 对应标签 `v1.0.8`）。
